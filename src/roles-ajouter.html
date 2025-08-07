@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fomulaire</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/ajouterRole.js" defer></script>
+    </head>
+    <header>
+        <h1>Ajouter un rôle</h1>
+        <img id="imgCRM" src="./img/logo/CRM_logo-horizontal-noir.png" alt="Logo">
+    </header>
+
+    <body>
+        <form>
+            <fieldset>
+                <div class="div">
+                <label for="ajouter_role">Ajouter un rôle</label>
+                <input type="text" id="ajouter">
+                <button type="submit" class="buttons" id="btn_ajouter_role">Ajouter</button>
+                </div>
+                <div id="div">
+                <label for="ajouter_description">Ajouter une déscription</label>
+                <textarea name="textarea" class="text_area" placeholder="Décrivez le rôle que vous voulez ajouter"></textarea>
+                <button title="Ajouter une zone de texte" class="buttons" id="ajouter_description">+</button>
+                </div>
+                <div id="zone">
+
+                </div>
+                <div id="envoyer">
+                <button class="buttons">Envoyer</button>
+                </div>
+            </fieldset>
+        </form>
+        <form action="./index.html">
+            <button class="buttons" type="submit">Retour à l'accueil</button>
+        </form>
+    </body>
+<footer>Christopher Arès</footer>
+</html>

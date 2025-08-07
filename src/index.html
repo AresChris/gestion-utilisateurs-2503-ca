@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'accueil</title>
-</head>
-<body>
-    <h1>Accueil</h1>
-    <img src="./img/logo/CRM_logo-horizontal-noir.png" alt="Logo">
-    <p>Pages à implémenter</p>
-    <ul>
-        <li><a href="roles.html">Liste des rôles</a></li>
-        <li><a href="roles-ajouter.html">Ajouter un rôle</a></li>
-        <li><a href="utilisateurs.html">Liste des utilisateurs</a></li>
-        <li><a href="utilisateurs-ajouter.html">Ajouter un utilisateur</a></li>
-        <li><a href="profil.html">Afficher un profil utilisateur</a></li>
-    </ul>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Page d'accueil</title>
+    </head>
+    <header>
+        <h1>Accueil</h1>
+        <img id="imgCRM" src="./img/logo/CRM_logo-horizontal-noir.png" alt="Logo">
+    </header>
+
+    <body>
+
+        <p id="p_index">Menu</p>
+        <form action="roles.html">
+            <button class="buttons" type="submit">Roles</button>
+        </form>
+        <form action="roles-ajouter.html">
+            <button class="buttons" type="submit">Ajouter un rôle</button>
+        </form>
+        <form action="utilisateurs.html">
+            <button class="buttons" type="submit">Liste des utilisateurs</button>
+        </form>
+        <form action="utilisateurs-ajouter.html">
+            <button class="buttons" type="submit">Ajouter un utilisateur</button>
+        </form>
+        <form action="profil.html">
+            <button class="buttons" type="submit">Afficher un profil utilisateur</button>
+        </form>
+    </body>
+    <footer>Christopher Arès</footer>
 </html>

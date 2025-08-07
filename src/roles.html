@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Roles</title>
+        <link rel="stylesheet" href="./css/style.css">
+        </link>
+    </head>
+    <header>
+        <h1>Liste des rôles</h1>
+        <img id="imgCRM" src="./img/logo/CRM_logo-horizontal-noir.png" alt="Logo">
+    </header>
+
+    <body>
+        <table>
+            <tr>
+                <th>nom</th>
+                <th>Déscription</th>
+            </tr>
+            <tr>
+                <td>Invités</td>
+                <td>
+                    <li>Après identification, il est redirigé vers la page de son profil</li>
+                    <li>Un invité peut créer un compte s’il dispose du code d’inscription</li>
+                    <li>Après la création, il est redirigé vers le formulaire d’identification</li>
+                    <li>Un invité peut demander à réinitialiser son mot de passe</li>
+                </td>
+            </tr>
+            <tr>
+                <td>Usager</td>
+                <td>
+                    <li>Un usager peut consulter son profil</li>
+                    <li>Un usager peut modifier les informations de son propre profil sauf son rôle</li>
+                    <li>Un usager peut parcourir la liste des utilisateurs enregistrés</li>
+                    <li>La liste des utilisateurs affiche : Nom, Prénom, Intitulé du rôle</li>
+                    <li>Un usager ne peut pas consulter les fiches individuelles des autres utilisateurs</li>
+                    <li>Un usager peut se déconnecter de l’application</li>
+                </td>
+            </tr>
+            <tr>
+                <td>Encadrant</td>
+                <td>
+                    <li>Un encadrant est un usager avec privilèges accrus</li>
+                    <li>Un encadrant peut consulter les profils individuels des usagers et encadrants</li>
+                    <li>Un encadrant peut modifier les informations des usagers sauf leur rôle et leur mot de passe</li>
+                </td>
+            </tr>
+            <tr>
+                <td>Administrateur</td>
+                <td>
+                    <li>Un administrateur est un encadrant avec privilèges accrus</li>
+                    <li>Un administrateur peut consulter le profil individuel de n’importe quel utilisateur</li>
+                    <li>Un administrateur peut modifier toutes les informations d’un utilisateur enregistré</li>
+                    <li>Un administrateur peut ajouter un utilisateur sans code d’inscription</li>
+                    <li>Un administrateur peut supprimer un utilisateur</li>
+                </td>
+            </tr>
+        </table>
+        <form action="./index.html">
+            <button class="buttons" type="submit">Retour à l'accueil</button>
+        </form>
+    </body>
+    <footer>Christopher Arès</footer>
+
+</html>
