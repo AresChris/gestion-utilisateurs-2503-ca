@@ -35,9 +35,7 @@ function ajouterUtilisateur(event) {
         const paragraph = document.createElement('p');
         paragraph.textContent = `${prenom_user.value} ${nom_user.value} a été ajouté`;
         fieldset.appendChild(paragraph);
-    } else {
-        alert('Erreur: Vérifier votre saisie');
-    }
+    } 
 }
 
 
@@ -112,24 +110,32 @@ function validatePassword(_password1, _password2) {
     let regexDigit = /[0-9]/;
     let regexNumberOfCaracteres =/^.{12,}$/
 
-    if(_password1 === '' && _password2 === ''){
+    if(_password1 === '' || _password2 === ''){
         alert('Veuillez saisir un mot de passe')
-    } else if(_password1 != _password2){
-        alert('Les mots de passe ne se ressemblent pas')
-    } else if((_password1 === _password2) && !regexUpperCase.test(_password1)){
-        alert('Au moins une lettre majuscule est necessaire dans le mot de passe !');
-    } else if((_password1 === _password2) && !regexLowerCase.test(_password1)) {
-        alert('Au moins une lettre minuscule est necessaire dans le mot de passe !');
-    } else if((_password1 === _password2) && !regexDigit.test(_password1)) {
-        alert('Au moins un chiffre necessaire dans le mot de passe !');
-    } else if((_password1 === _password2) && !regexNumberOfCaracteres.test(_password1)){
-        alert('Au moins 12 caractères sont necessaires dans le mot de passe !');
-    } else if((_password1 === _password2) && regexUpperCase.test(_password1) && regexLowerCase.test(_password1) && regexDigit.test(_password1) && regexNumberOfCaracteres.test(_password1)){
-        return true;
-    } else{
-        alert('Mauvais mot de passe');
         return false;
     }
+
+    if(_password1 != _password2){
+        alert('Les mots de passe ne se ressemblent pas')
+        return false;
+    }
+    else {
+        if(!regexUpperCase.test(_password1)){
+            alert('Au moins une lettre majuscule est necessaire dans le mot de passe !');
+        return false;
+        } else if( !regexLowerCase.test(_password1)) {
+            alert('Au moins une lettre minuscule est necessaire dans le mot de passe !');
+        return false;
+        } else if(!regexDigit.test(_password1)) {
+            alert('Au moins un chiffre necessaire dans le mot de passe !');
+        return false;
+        } else if( !regexNumberOfCaracteres.test(_password1)){
+            alert('Au moins 12 caractères sont necessaires dans le mot de passe !');
+        return false;
+        }
+    }
+    // on considère que le mot de passe est OK
+    return true;
 }
 
 /**
