@@ -4,11 +4,18 @@
     --body: #FDF0D5;
     --profil_background: #7D98A1; 
 }
+@media (max-width: 768px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+}
 header{
     display: flex;
     justify-content: space-between;
     margin: auto;
-    width: 750px;
+    width: 1200px;
     background-color: var(--header_footer);
     border: 1px solid var(--border); 
     border-top-left-radius: 15px;
@@ -19,11 +26,13 @@ h1{
     padding-left: 15px;
 }
 html{
+    margin: auto;
     background-color: rgb(68, 66, 66);
+    font-size: larger;
 }
 body{
     background-color: var(--body);
-    width: 750px;
+    width: 1200px;
     margin: auto;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -34,16 +43,16 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 table{
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .buttons{
     background-color: var(--header_footer);
     color: white;
     width: 150px;
-    margin: 5px;
+    height: 30px;
+    margin: 15px;
     border: none;
     margin-left: 15px;
     margin-bottom: 10px;
@@ -59,7 +68,14 @@ table{
     margin: 0px;
     border: none;
 }
-#prenom_user, #nom_user, #email_user{
+#prenom_user, 
+#nom_user, 
+#email_user, 
+#phone_number, 
+#birthdate,
+#password1,
+#password2,
+#ajouter_role{
     background-color: var(--header_footer);
     color: white;
     width: 150px;
@@ -68,6 +84,15 @@ table{
 }
 #tableau_roles, th, td, tr{
     border: 1px solid black;
+}
+fieldset{
+    width: 250px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    align-content: center;
+    border: none;
 }
 #profils{
     display: grid;
@@ -104,6 +129,7 @@ table{
     grid-area: a3;
     margin-top: 15px;
     margin-right: 15px;
+    height: 75px;
     text-align: center;
     align-content: center;
     border: 1px dotted black;
@@ -113,6 +139,7 @@ table{
     height: auto;
     padding-right: 15px;
 }
+
 li{
     padding-left: 15px;
 }
@@ -121,12 +148,13 @@ td{
     padding-left: 5px;
     padding-right: 10px;
 }
-#p_index{
+#menu{
     padding-left: 20px;
     font-weight: bolder;
 }
 label{
     padding-right: 10px;
+
     width: 200px;
 }
 #btn_ajouter_role{
@@ -146,21 +174,34 @@ textarea{
     color: white;
     width: 150px;
 }
-
+::placeholder{
+    color: white;
+}
+select{
+    background-color: var(--profil_background);
+    color: white;
+    width: 150px;
+}
 div{
     display: flex;
+    align-items: center;
+    align-content: center;
     margin-top: 15px;
 }
 #zone{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin-left: 210px;
+}
+#form-profil{
+    margin-bottom: 15px;
 }
 footer{
     background-color: var(--header_footer);
     text-align: center;
     margin: auto;
-    width: 750px;
+    width: 1200px;
     font-weight: bold;
     border: 1px solid var(--border);
     border-bottom-left-radius: 15px;
